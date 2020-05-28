@@ -42,7 +42,33 @@ namespace PilaresProgEstructurada
                 aux = aux + "b mayor que a";
 
             this.txtResultado.Text = aux;
-
+            this.getSaludos(saludo); //llamada a la función
+            this.lblNombres.Text = this.lblNombres.Text + "-->" + this.getCalculos(a, b).ToString();
         }
+
+    //procedimientos - funciones
+    //las funciones devuelven valores.
+    //el procedimiento es una función que no devuelve valor
+    void getSaludos(string nombres)
+        {
+            this.lblNombres.Text = "Uso de función que no devuelve valor (" + nombres + ")";
+        }
+
+    // función que devuelve valor
+
+    double  getCalculos(int a, int b)
+        {
+            double resul = 0;
+            resul = (a * 10) / (b * 2.5);
+            
+            return resul;
+        }
+        // tipos de datos en C#
+        // operadores lógicos
+        // Operadores relacionales
+        // Operadores aritméticos
+        // Estructuras repetitivas
+
+
     }
 }
