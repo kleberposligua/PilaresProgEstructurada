@@ -69,6 +69,36 @@ namespace PilaresProgEstructurada
         // Operadores aritméticos
         // Estructuras repetitivas
 
+        //paso de parámetros por valor
+        //cuando se pasa una copia de la variable. 
+        void ejemploPasoValor(int x)
+        {
+            x = x + 100;
+            MessageBox.Show("El nuevo valor de x: " + x.ToString());
+        }
+
+        void ejemploPasoReferencia(ref int a)
+        { //la función recibe la variable original (dirección de memoria)
+            //cualquier cambio en esta variable se refleja en la original
+            a = a + 100;
+            MessageBox.Show("El nuevo valor de x: " + a.ToString());
+        }
+        private void btnPasoValor_Click(object sender, EventArgs e)
+        {
+            int x = 5; int y = 200;
+            //ejemploPasoValor(x);
+            //ejemploPasoReferencia(ref x);
+            this.ejemploParametrosOpcionales(x,y);
+            this.txtValor.Text = x.ToString();
+        }
+
+        //paso de parámetros opcionales
+        void ejemploParametrosOpcionales(int x, int y=10)
+        {
+            x = x + y;
+            MessageBox.Show("Parámetro opcional:" + y.ToString());
+            MessageBox.Show("El nuevo valor de x:"  + x.ToString());
+        }
 
     }
 }

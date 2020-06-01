@@ -36,6 +36,8 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.txtResultado = new System.Windows.Forms.TextBox();
             this.lblNombres = new System.Windows.Forms.Label();
+            this.txtValor = new System.Windows.Forms.TextBox();
+            this.btnPasoValor = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -85,7 +87,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(613, 173);
+            this.btnAceptar.Location = new System.Drawing.Point(671, 184);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(122, 37);
             this.btnAceptar.TabIndex = 5;
@@ -111,11 +113,30 @@
             this.lblNombres.TabIndex = 7;
             this.lblNombres.Text = "Nombres";
             // 
+            // txtValor
+            // 
+            this.txtValor.Location = new System.Drawing.Point(783, 93);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(183, 26);
+            this.txtValor.TabIndex = 8;
+            // 
+            // btnPasoValor
+            // 
+            this.btnPasoValor.Location = new System.Drawing.Point(822, 184);
+            this.btnPasoValor.Name = "btnPasoValor";
+            this.btnPasoValor.Size = new System.Drawing.Size(144, 37);
+            this.btnPasoValor.TabIndex = 9;
+            this.btnPasoValor.Text = "Paso por Valor";
+            this.btnPasoValor.UseVisualStyleBackColor = true;
+            this.btnPasoValor.Click += new System.EventHandler(this.btnPasoValor_Click);
+            // 
             // frmDatosPersonales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1090, 461);
+            this.ClientSize = new System.Drawing.Size(1002, 461);
+            this.Controls.Add(this.btnPasoValor);
+            this.Controls.Add(this.txtValor);
             this.Controls.Add(this.lblNombres);
             this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.btnAceptar);
@@ -141,5 +162,7 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.TextBox txtResultado;
         private System.Windows.Forms.Label lblNombres;
+        private System.Windows.Forms.TextBox txtValor;
+        private System.Windows.Forms.Button btnPasoValor;
     }
 }
